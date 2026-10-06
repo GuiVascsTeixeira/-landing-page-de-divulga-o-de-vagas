@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vagas de Estágio | Divulgue e encontre</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topo">
+    <a class="logo" href="#inicio">Vagas<span>Já</span></a>
+    <nav>
+      <a href="#cadastro">Divulgar vaga</a>
+      <a href="#vagas">Ver vagas</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <h1>Sua vaga de estágio vista por quem procura.</h1>
+      <p>Cadastre a vaga da sua empresa em menos de um minuto e ela aparece na lista de divulgação na mesma hora.</p>
+      <a class="botao" href="#cadastro">Divulgar uma vaga</a>
+    </section>
+
+    <section class="cadastro" id="cadastro">
+      <h2>Cadastrar vaga</h2>
+      <form id="form-vaga">
+        <label>Empresa
+          <input type="text" id="empresa" placeholder="Ex.: FlashNet" required>
+        </label>
+
+        <label>Cargo
+          <input type="text" id="cargo" placeholder="Ex.: Estagiário de suporte técnico" required>
+        </label>
+
+        <label>Modalidade
+          <select id="modalidade" required>
+            <option value="">Selecione</option>
+            <option>Presencial</option>
+            <option>Híbrido</option>
+            <option>Remoto</option>
+          </select>
+        </label>
+
+        <label>Local
+          <input type="text" id="local" placeholder="Ex.: Centro" required>
+        </label>
+
+        <label>Bolsa mensal (R$)
+          <input type="number" id="bolsa" min="0" step="50" placeholder="Ex.: 1200" required>
+        </label>
+
+        <label>Contato para candidatura
+          <input type="text" id="contato" placeholder="E-mail ou WhatsApp" required>
+        </label>
+
+        <button type="submit" class="botao">Publicar vaga</button>
+      </form>
+    </section>
+
+    <section class="vagas" id="vagas">
+      <h2>Vagas divulgadas</h2>
+      <p class="contador" id="contador"></p>
+
+      <div class="tabela-area">
+        <table>
+          <thead>
+            <tr>
+              <th>Empresa</th>
+              <th>Cargo</th>
+              <th>Modalidade</th>
+              <th>Local</th>
+              <th>Bolsa</th>
+              <th>Contato</th>
+              <th>Ação</th>
+            </tr>
+          </thead>
+          <tbody id="tabela-vagas"></tbody>
+        </table>
+      </div>
+
+      <p class="vazio" id="vazio">Nenhuma vaga cadastrada ainda. Use o formulário acima para publicar a primeira.</p>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p>&copy; 2026 VagasJá. Projeto da faculdade.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
